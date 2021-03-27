@@ -1,1 +1,16 @@
-//Hello teammates!
+$(document).ready(function () {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+});
