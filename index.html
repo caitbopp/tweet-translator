@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+    
+    <!-- Translate button -->
+    <div class="translate-button">
+        <button data-target="modal1" class="btn modal-trigger">Modal</button>
+    </div>
+
+    <div class="modal">
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Yoda Says...</a>
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Yoda Says...</h4>
+                <!-- This is where translation will result -->
+                <p>A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+                <!-- Close button on modal to return to main screen -->
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+        </div>
+
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./script.js"></script>
 </body>
+
 </html>
