@@ -6,7 +6,7 @@ var randomGeneratorBtn = $("#");
 var translateBtn = $("#");
 var advice;
 
-$(randomGeneratorBtn).click(getRandomQuote());
+// $(randomGeneratorBtn).click(getRandomQuote());
 
 function getRandomQuote(){
     fetch("https://api.adviceslip.com/advice", {
