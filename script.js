@@ -1,12 +1,10 @@
 $(document).ready(function () {
 
 //the button id needs to be added below
-var randomGeneratorBtn = $("#");
+var randomGeneratorBtn = $("#random-generator-btn");
 //the button id needs to be added below
-var translateBtn = $("#");
+var translateBtn = $("#translate-btn");
 var advice;
-
-$(randomGeneratorBtn).click(getRandomQuote());
 
 function getRandomQuote(){
     fetch("https://api.adviceslip.com/advice", {
@@ -19,21 +17,6 @@ function getRandomQuote(){
         console.log(data.slip.advice);
         displayQuote(data);
     })
-}
-
-function displayQuote(data){
-    advice = data.slip.advice;
-    //this will display the div so that the preview of the quote will show up
-    //.hidden is intended to be: display:none initially
-    $(".hidden").removeClass("hidden");
-    //#text-display is the element that will display the random quote
-    $("#text-display").text(advice);
-}
-
-$(translateBtn).click(displayTranslatedQuote());
-
-function displayTranslatedQuote(){
-    translateToYoda();
 }
 
 function translateToYoda(){
@@ -51,18 +34,22 @@ function translateToYoda(){
     })
     .then(function (data){
         console.log(data.contents.translated);
-        showFinalResult(data);
     })
-  }
-
-function showFinalResult(data){
-    var translatedAdvice = data.contents.translated;
-    
-    $("#").text(translatedAdvice);
-
-    //more needs to be here about making the modal visible and display it properly
-
 }
+
+randomGeneratorBtn.click(getRandomQuote);
+
+function displayQuote(data){
+    advice = data.slip.advice;
+    //this will display the div so that the preview of the quote will show up
+    //.hidden is intended to be: display:none initially
+    $(".hidden").removeClass("hidden");
+    //#text-display is the element that will display the random quote
+    $("#preview-text").text(advice);
+}
+
+translateBtn.click(displayTranslatedQuote);
+
 
 
 
