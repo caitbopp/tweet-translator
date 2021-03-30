@@ -1,40 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+	<head>
+		<!--Import Google Icon Font-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css" />
+		<script type="text/javascript"src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+    	<link rel="stylesheet" href="./style.css">
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
 
-<body>
-    
-    <!-- Translate button -->
-    <div id="translate-button">
-        <button data-target="modal1" class="btn modal-trigger">Modal</button>
-    </div>
-
-    <div class="modal">
-        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Yoda Says...</a>
-
-        <!-- Modal Structure -->
-        <div id="modal1" class="modal">
-            <div class="modal-content">
-                <h4>Yoda Says...</h4>
-                <!-- This is where translation will result -->
-                <p>A bunch of text</p>
+	<body class="container">
+        <header class="header-custom">
+            <div class="row">
+              <div class="col s12">
+                <h1>Yoda Advice</h1>
+				<h2>"Do or do not, there is no try."</h2>
+              <h6 classCurrent Time &amp; Date: <br> <span id="time-display">Mar 29, 2021 at 07:22:01 pm</span></h6>
             </div>
-            <div class="modal-footer">
-                <!-- Close button on modal to return to main screen -->
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-            </div>
-        </div>
+          </header>
 
-    </div>
+		  <a class="waves-effect waves-light btn-large">Generate a random piece of advice for Master Yoda to generate</a>
+		  <br>
+		  
+		  <label for="textarea">Enter a piece of advice for Master Yoda to translate.</label>
+		  <textarea id="textarea"></textarea>
+		  
+		  <br>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./script.js"></script>
-</body>
+		  <button class="btn waves-effect waves-light" type="submit" name="action">Translate Button
+			<i class="material-icons right">send</i>
+		  </button>
+				
+		<script>
+			$(document).ready(function () {
+				$("select").material_select();
+			});
+		</script>
+		<!-- Compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    	<script src="./script.js"></script>
 
+   		<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
+	
+	</body>
 </html>
