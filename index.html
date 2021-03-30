@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./mcss/materialize.css" />
+    <link rel="stylesheet" href="./mcss/materialize.min.css" />
+
 <body>
-    
-</body>
+        <main>
+
+            <div class="card">
+                <div class="row center">
+                    <h1>Yoda Advice</h1>
+                    <h2>“Do or do not, there is no try.”</h2>
+                    <form id="form">
+                    <input type="text" placeholder="Enter a piece of advice for yoda to translate" name="text" id="yText" />
+                    </form>
+                    <button id="Generate Translation" class="btn btn-danger">Submit</button>
+                    <hr />
+            </div>
+           
+            <div class="container">
+                <div class="row center">
+                    <br />
+                
+                          <p>Generate a random piece of advice for Yoda to translate</p>
+                          <button id="alert-btn" class="btn btn-danger">Generate</button>
+                          <hr />
+            </div>
+
+            <div class="container">
+                <div class="row center">
+                    <br />
+                
+                            <p>Recent Translations</p>
+                            <button id="alert-btn" class="btn btn-danger">Generate</button>
+                            <hr />
+                      
+    </div>
+  </body>
+
+  <script src="./mjs/materialize.js"></script>
+  <script src="./mjs/materialize.min.js"></script>
+  <script src="./script.js"></script>
+
 </html>
