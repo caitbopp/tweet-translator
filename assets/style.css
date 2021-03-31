@@ -3,19 +3,19 @@
     margin: 0;
     box-sizing: border-box;
     font-family: fantasy;
+    line-height: 2;
 }
 
-main {
-    padding-top: 5%;
+#main-page {
+    margin-bottom: 5%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 p {
-    margin: 10px 0;
-    font-size: 30px;
+    margin: 30px 20px 20px 20px;
+    font-size: 20px;
 }
 
 h5 {
@@ -26,6 +26,41 @@ textarea {
     width: 50%;
 }
 
-#translate-btn {
+#translate-btn, .submit-btn {
     margin-top: 40px;
+}
+
+#random-advice-btn {
+    margin-top: 0;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.random-advice-div{
+    margin-bottom: 5%;
+}
+
+.own-advice-div{
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#preview-advice{
+    border: 2px green solid;
+    padding: 10px;
+}
+
+.submit-btn{
+    background-color: rgb(51, 136, 51);
+}
+
+.hidden{
+    display: none;
 }
