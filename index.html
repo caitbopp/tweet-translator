@@ -19,22 +19,43 @@
 			<div class="center col s12">
 				<h1><img src="./assets/yoda.png" class="center" alt="Yoda" width="100" height="200"></h1>
 				<h2>"Do or do not, there is no try."</h2>
-				<h6 classCurrent Time &amp; Date: <br> <span id="time-display">Mar 29, 2021 at 07:22:01 pm</span></h6>
+				<!-- <h5>Date and time of entry
+					. Yes, hrrrm:</h5> -->
+				<h6><span id='date-time'></span></h6>
 			</div>
 	</header>
 
 	<main>
 		<!-- <a class="waves-light btn-large">Generate a random piece of advice</a> -->
-		<button class="waves-light btn-large" id="advice-btn">Generate a random piece of advice</button>
+		<button class="waves-effect waves-light btn modal-trigger" data-target="#modal1">Generate a random piece of advice</a>
+			<!-- Modal Structure -->
+			<div id="modal1" class="modal">
+			  <div class="modal-content">
+				<h4>Modal Header</h4>
+				<p>A bunch of text</p>
+			  </div>
+			  <div class="modal-footer">
+				<a data-target="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+			  </div>
+			</div>
+		</button> <br>
+		
 		<p>OR</p>
 
-		<h5>Enter your own advice</h5>
+		<!-- <h5>Enter your own advice</h5>
 		<textarea></textarea>
-	
-
-		<button class="waves-light btn-large" id="translate-btn">Have Master Yoda translate advice
-			<i class="material-icons right">send</i>
-		</button>
+	 -->
+	 <button class="waves-effect waves-light btn modal-trigger" data-target="#modal1">Have Master Yoda translate advice</a>
+		<!-- Modal Structure -->
+		<div id="modal1" class="modal">
+		  <div class="modal-content">
+			<h4>Modal Header</h4>
+			<p>A bunch of text</p>
+		  </div>
+		  <div class="modal-footer">
+			<a data-target="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+		  </div>
+		</div>
 
 	</main>
 

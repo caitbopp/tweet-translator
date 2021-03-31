@@ -5,7 +5,9 @@ var randomGeneratorBtn = $("#");
 //the button id needs to be added below
 var translateBtn = $("#");
 var advice;
+var dt = new Date();
 
+document.getElementById('date-time').innerHTML=dt;
 // $(randomGeneratorBtn).click(getRandomQuote());
 
 function getRandomQuote(){
@@ -64,6 +66,15 @@ function showFinalResult(data){
 
 }
 
+// Initialization
+// To open a modal using a trigger:
+
+
+//   document.addEventListener('DOMContentLoaded', displayQuote(data){
+//     var elems = document.querySelectorAll('#modal1');
+//     var instances = M.Modal.init(elems, options);
+//   });  
+// }
 
 
 })
