@@ -5,6 +5,9 @@ var randomGeneratorBtn = $("#");
 //the button id needs to be added below
 var translateBtn = $("#");
 var advice;
+var dt = new Date();
+
+document.getElementById('date-time').innerHTML=dt;
 
 // $(randomGeneratorBtn).click(getRandomQuote());
 

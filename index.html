@@ -19,15 +19,28 @@
 			<div class="center col s12">
 				<h1><img src="./assets/yoda.png" class="center" alt="Yoda" width="100" height="200"></h1>
 				<h2>"Do or do not, there is no try."</h2>
-				<h6 classCurrent Time &amp; Date: <br> <span id="time-display">Mar 29, 2021 at 07:22:01 pm</span></h6>
+				<h5>Date and time of entry
+					. Yes, hrrrm:</h5>
+				<h6><span id='date-time'></span></h6>
 			</div>
 	</header>
 
-	<a class="waves-effect waves-light btn-large">Generate a random piece of advice for Master Yoda to generate</a>
+	<label for="reddit">Generate random advice from Master Yoda</label>
+	<textarea id="reddit" name="reddit" rows="4" cols="50">
+		=> display "getRandomQuote"
+	</textarea>
+	
+	<button class="waves-effect waves-light btn-large">Generate</a>
+		<i class="material-icons right">send</i>
+	</button>
+	
 	<br>
 
-	<label for="textarea">Enter a piece of advice for Master Yoda to translate.</label>
-	<textarea id="textarea"></textarea>
+	<label for="translate">Enter advice for Master Yoda to translate.</label>
+	<textarea id="translate" name="translate" rows="4" cols="50">
+		
+		=>"getRandomQuote"
+	</textarea>
 
 	<br>
 
