@@ -2,4 +2,30 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: fantasy;
+}
+
+main {
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 30px;
+}
+
+h5 {
+    margin: 0 0 10px 0;
+}
+
+textarea {
+    width: 50%;
+}
+
+#translate-btn {
+    margin-top: 40px;
 }
