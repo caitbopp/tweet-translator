@@ -7,6 +7,9 @@ $(document).ready(function () {
     var translateBtn1 = $(".modal-trigger");
     var translateBtn2 = $(".modal-trigger");
     var ownTextArea = $("#text-area");
+    var doneBtn = $("#done-btn");
+    var translatedList = [];
+    var translatedAdvice;
     var advice;
     var dt = new Date();
 
@@ -51,6 +54,14 @@ $(document).ready(function () {
 
     translateBtn1.click(translateToYoda);
     translateBtn2.click(translateOwnAdvice);
+    doneBtn.click(setLocalStorage);
+
+    function setLocalStorage(){
+        translatedList.push(translatedAdvice);
+        console.log(translatedList);
+        localStorage.setItem("previous-translation-list", translatedList);
+        $("#translated-advice").val("");
+    }
 
     function translateToYoda() {
         var yodaURL = "https://api.funtranslations.com/translate/yoda.json?text=" +
@@ -84,7 +95,9 @@ $(document).ready(function () {
 
 
     function showFinalResult(data) {
-        var translatedAdvice = data.contents.translated;
+        translatedAdvice = data.contents.translated;
+
+        translatedAdvice = translatedAdvice + " - Yoda";
 
         $("#translated-advice").text(translatedAdvice);
 
