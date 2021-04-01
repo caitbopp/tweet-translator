@@ -64,6 +64,9 @@ function showFinalResult(data){
 
 }
 
+$('.modal-trigger').leanModal();
+
+
 
 
 })
