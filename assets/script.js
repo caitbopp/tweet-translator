@@ -2,13 +2,18 @@ $(document).ready(function () {
 
 
     var randomGeneratorBtn = $("#random-advice-btn");
+    var ownAdviceBtn = $("#own-advice-btn");
     var retryButton = $("#retry-btn");
-    var translateBtn = $(".modal-trigger");
+    var translateBtn1 = $(".modal-trigger");
+    var translateBtn2 = $(".modal-trigger");
+    var ownTextArea = $("#text-area");
     var advice;
 
     // $(randomGeneratorBtn).click(getRandomQuote());
     randomGeneratorBtn.click(getRandomAdvice);
     retryButton.click(getRandomAdvice);
+    ownAdviceBtn.click(displayOwnAdvice);
+
 
     function getRandomAdvice() {
         fetch("https://api.adviceslip.com/advice", {
@@ -28,12 +33,21 @@ $(document).ready(function () {
         //this will display the div so that the preview of the quote will show up
         //.hidden is intended to be: display:none initially
         $(".random-advice-div").removeClass("hidden");
+        $(".own-advice-div").addClass("hidden");
         //#text-display is the element that will display the random quote
         $("#preview-advice").text(advice);
     }
 
-    translateBtn.click(translateToYoda);
+    function displayOwnAdvice() {
+        $(".own-advice-div").removeClass("hidden");
+        $(".random-advice-div").addClass("hidden");
+   
+    }
 
+
+
+    translateBtn1.click(translateToYoda);
+    translateBtn2.click(translateOwnAdvice);
 
     function translateToYoda() {
         var yodaURL = "https://api.funtranslations.com/translate/yoda.json?text=" +
@@ -54,6 +68,17 @@ $(document).ready(function () {
                 showFinalResult(data);
             })
     }
+
+    function translateOwnAdvice() {
+        if (!ownTextArea.val()) {
+            return;
+        }
+        else {
+            advice = ownTextArea.val();
+            translateToYoda(advice);
+        }
+    }
+
 
     function showFinalResult(data) {
         var translatedAdvice = data.contents.translated;
