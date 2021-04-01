@@ -60,6 +60,8 @@ h5 {
 
 textarea {
     width: 50%;
+    background-color: #10b5ac;
+    
 }
 
 #translate-btn, .submit-btn {
