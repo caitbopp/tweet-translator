@@ -20,7 +20,11 @@
 				<h1><img src="./assets/yoda.png" class="center" alt="Yoda" width="100" height="200"></h1>
 				<h2>"Do or do not, there is no try."</h2>
 				<h6 classCurrent Time &amp; Date: <br> <span id="time-display">Mar 29, 2021 at 07:22:01 pm</span></h6>
-				<p>In a galaxy far, far away...Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias debitis quas minus unde officiis quisquam incidunt in animi nam dolorum reprehenderit impedit facere quibusdam, provident explicabo eum illo doloremque excepturi. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum et voluptates nam vel labore inventore ea molestias at, doloribus incidunt nemo eos. Minima saepe nostrum officia odit voluptatibus voluptas corporis.</p>
+				<p>In a galaxy far, far away...Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias debitis
+					quas minus unde officiis quisquam incidunt in animi nam dolorum reprehenderit impedit facere
+					quibusdam, provident explicabo eum illo doloremque excepturi. Lorem ipsum, dolor sit amet
+					consectetur adipisicing elit. Ipsum et voluptates nam vel labore inventore ea molestias at,
+					doloribus incidunt nemo eos. Minima saepe nostrum officia odit voluptatibus voluptas corporis.</p>
 			</div>
 	</header>
 
@@ -33,53 +37,36 @@
 		</div>
 
 		<div class="hidden random-advice-div">
-			<div id="preview-advice">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, similique sunt! Reiciendis, iste. Natus doloribus provident enim assumenda doloremque esse nemo possimus officia non? Sed quam reprehenderit nostrum ipsam qui?</div>
+			<div id="preview-advice">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, similique
+				sunt! Reiciendis, iste. Natus doloribus provident enim assumenda doloremque esse nemo possimus officia
+				non? Sed quam reprehenderit nostrum ipsam qui?</div>
 			<div class="flex">
 				<button id="retry-btn">Don't like it? Click me to try again?</button>
-				<button class="submit-btn btn-large">Translate!</button>
+				<a class="waves-light btn modal-trigger" href="#modal1">Translate</a>
 			</div>
 		</div>
 
 		<div class="hidden own-advice-div">
 			<h5>Enter your own advice</h5>
 			<textarea></textarea>
-			<button class="submit-btn btn-large">Translate!</button>
+			<a class="waves-light btn modal-trigger" href="#modal1">Translate</a>
 		</div>
-		
- <!-- Modal Trigger -->
- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
-
- <!-- Modal Structure -->
- <div id="modal1" class="modal">
-   <div class="modal-content">
-	 <h4>Modal Header</h4>
-	 <p>A bunch of text</p>
-   </div>
-   <div class="modal-footer">
-	 <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-   </div>
- </div>
 
 
+		<!-- Modal Structure -->
+		<div id="modal1" class="modal">
+			<div class="modal-content">
+				<h4>Modal Header</h4>
+				<p id="translated-advice"></p>
+			</div>
+			<div class="modal-footer">
+				<a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+			</div>
+		</div>
 
-
-		<!-- <a class="waves-light btn-large">Generate a random piece of advice</a> -->
-		<!-- <button class="waves-light btn-large" id="advice-btn">Generate a random piece of advice</button> -->
-		<!-- <p>OR</p>
-
-		<h5>Enter your own advice</h5>
-		<textarea></textarea>
-	
-
-		<button class="waves-light btn-large" id="translate-btn">Have Master Yoda translate advice
-			<i class="material-icons right">send</i>
-		</button> -->
 
 	</main>
 
-
-	<!-- <div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all">
-	</div> -->
 
 	<!-- Compiled and minified JavaScript -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
