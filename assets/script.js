@@ -5,6 +5,9 @@ $(document).ready(function () {
     var retryButton = $("#retry-btn");
     var translateBtn = $(".modal-trigger");
     var advice;
+    var dt = new Date();
+
+    // document.getElementById('date-time').innerHTML=dt;
 
     // $(randomGeneratorBtn).click(getRandomQuote());
     randomGeneratorBtn.click(getRandomAdvice);
