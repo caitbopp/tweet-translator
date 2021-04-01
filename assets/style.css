@@ -67,6 +67,13 @@ textarea {
     margin-top: 40px;
 }
 
+#translated-advice{
+    background-color: #00aabb;
+    border: none;
+    box-shadow: none;
+    padding: 10px;
+}
+
 #random-advice-btn {
     margin-top: 0;
 }
@@ -75,6 +82,12 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+}
+
+.flex-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .random-advice-div{
@@ -102,6 +115,34 @@ textarea {
 
 .hidden{
     display: none;
+}
+
+.speech-bubble {
+	position: relative;
+	background: #00aabb;
+	border-radius: .4em;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 25%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-right-color: #00aabb;
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -10px;
+	margin-left: -20px;
+}
+
+.cute-yoda{
+    transform: scaleX(-1);
+    border: none;
+    background-color: white;
+    box-shadow: none;
 }
 
 .modal-trigger{
