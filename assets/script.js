@@ -8,6 +8,9 @@ $(document).ready(function () {
     var translateBtn2 = $(".modal-trigger");
     var ownTextArea = $("#text-area");
     var advice;
+    var dt = new Date();
+
+    document.getElementById('date-time').innerHTML=dt;
 
     // $(randomGeneratorBtn).click(getRandomQuote());
     randomGeneratorBtn.click(getRandomAdvice);
