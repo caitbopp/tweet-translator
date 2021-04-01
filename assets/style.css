@@ -13,6 +13,10 @@ html {
     font-family: fantasy;
     line-height: 2;
 }
+url {
+    background-color: #ffffff; 
+
+}
 
 #main-page {
     margin-bottom: 5%;
@@ -21,13 +25,37 @@ html {
     align-items: center;
 }
 
+img {
+    background-color: #000000;
+    border: solid rgb(3, 248, 23);
+    box-shadow: 0 5px 35px rgb(79, 216, 67);
+    
+
+}
+
 p {
     margin: 30px 20px 20px 20px;
     font-size: 20px;
+    background-color: #10b5ac;
+    border: solid rgba(3, 248, 203, 0.72);
+    box-shadow: 0 5px 35px rgb(79, 216, 67);
+    color: white;
+
+}
+
+h2, h6 {
+    background-color: #10b5ac;
+    color: white;
+    border: solid rgba(3, 248, 203, 0.72);
+    box-shadow: 0 5px 35px rgb(79, 216, 67);
 }
 
 h5 {
     margin: 0 0 10px 0;
+    background-color: #10b5ac;
+    color: white;
+    border: solid rgba(3, 248, 203, 0.72);
+    box-shadow: 0 5px 35px rgb(79, 216, 67);
 }
 
 textarea {
