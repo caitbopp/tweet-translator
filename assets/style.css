@@ -86,11 +86,13 @@ textarea {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 #preview-advice{
     border: 2px green solid;
     padding: 10px;
+    color: white;
 }
 
 .submit-btn{
