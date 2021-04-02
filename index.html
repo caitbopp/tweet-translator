@@ -17,8 +17,8 @@
 	<header class="header-custom" style="font-family:fantasy">
 		<div class="row">
 			<div class="center col s12">
-				<h1><img src="assets/Images/Yoda_TPM_RotS.png" class="center" alt="Yoda" width="100" height="200"></h1>
-				<h2>"Do or do not, there is no try."</h2>
+				<h1><img src="assets/Images/Yoda_TPM_RotS.png" class="center" alt="Yoda" width="185"></h1>
+				<h2 class="quote">"Do or do not, there is no try."</h2>
 				<h6><span id='date-time'></span></h6>
 				<p>In a galaxy far, far away...Yoda, the Jedi Master, is revered for his timeless wisdom and unique way of speaking. On this webpage, you can have Yoda translate a  randomly generated piece of advice or your own advice - click either button to get started!</p>
 			</div>
@@ -32,17 +32,14 @@
 			</button>
 		</div>
 
-		<div class="hidden random-advice-div">
-			<div id="preview-advice">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, similique
-				sunt! Reiciendis, iste. Natus doloribus provident enim assumenda doloremque esse nemo possimus officia
-				non? Sed quam reprehenderit nostrum ipsam qui?</div>
-			<div class="flex">
-				<button id="retry-btn">Don't like it? Click me to try again?</button>
-				<a class="waves-light btn modal-trigger" href="#modal1" id="translate-btn-1">Translate</a>
+		<div class="hidden random-advice-div flex-column">
+			<div id="preview-advice"></div>
+			<button id="retry-btn">Don't like it? Click me to try again!</button>
+			<a class="waves-light btn modal-trigger" href="#modal1" id="translate-btn-1">Translate</a>
 			</div>
 		</div>
 
-		<div class="hidden own-advice-div">
+		<div class="hidden own-advice-div flex-column">
 			<h5>Enter your own advice</h5>
 			<textarea id="text-area"></textarea>
 			<a class="waves-light btn modal-trigger" href="#modal1" id="translate-btn-2">Translate</a>
@@ -52,7 +49,7 @@
 		<!-- Modal Structure -->
 		<div id="modal1" class="modal">
 			<div class="modal-content">
-				<div class="flex-row">
+				<div class="flex-row double-center">
 					<img src="./assets/Images/cute-yoda.png" class="center cute-yoda" alt="Yoda" width="300" height="200"></h1>
 					<p id="translated-advice" class="speech-bubble"></p>
 				</div>
