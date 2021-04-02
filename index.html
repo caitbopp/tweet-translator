@@ -13,6 +13,25 @@
 	<!--Let browser know website is optimized for mobile-->
 </head>
 
+<body style = "text-align:center;">
+	  
+    <button onclick = "starSwt_Run()"> 
+      Change Background Color
+    </button>
+      
+    <script>
+      var el_down = document.getElementById("starSwt_DOWN");
+      
+      function changeColor(color) {
+        document.body.style.background = color;
+      }
+        
+      function starSwt_Run() {
+        changeColor('black');
+        el_down.innerHTML = "Background Color changed";
+      }         
+    </script> 
+
 <body class="container">
 	<header class="header-custom" style="font-family:fantasy">
 		<div class="row">
