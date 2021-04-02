@@ -124,6 +124,7 @@ textarea {
     border: none;
     box-shadow: none;
     padding: 10px;
+    text-align: center;
 }
 
 .speech-bubble {

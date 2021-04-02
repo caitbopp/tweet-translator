@@ -94,9 +94,84 @@ $(document).ready(function () {
     function showFinalResult(data) {
         translatedAdvice = data.contents.translated;
 
-        translatedAdvice = '"' + translatedAdvice + '"';
+        var oneSentence = true;
 
-        $("#translated-advice").text(translatedAdvice);
+        translatedAdvice = translatedAdvice.toString();
+        console.log(typeof translatedAdvice);
+        translatedAdvice = translatedAdvice.slice(0, -1);
+
+        if (translatedAdvice.includes(".")) {
+            console.log("More than 1 sentence");
+            oneSentence = false;
+            translatedAdvice = translatedAdvice.toLowerCase();
+            translatedAdvice = translatedAdvice.split(".");
+            console.log(translatedAdvice[0]);
+            console.log(translatedAdvice[1]);
+
+            var firstLetterOne = translatedAdvice[0].charAt(0);
+            firstLetterOne = firstLetterOne.toUpperCase();
+            var firstLetterTwo = translatedAdvice[1].charAt(0);
+            firstLetterTwo = firstLetterTwo.toUpperCase();
+            var translatedAdviceOne;
+            translatedAdviceOne = translatedAdvice[0].slice(1);
+            var translatedAdviceTwo;
+            translatedAdviceTwo = translatedAdvice[1].slice(1);
+
+            finalResult = '"' + firstLetterOne + translatedAdviceOne + '. ' + firstLetterTwo + translatedAdviceTwo + '."';
+            $("#translated-advice").text(finalResult);
+        } else {
+            console.log("One sentence")
+            console.log(translatedAdvice);
+            oneSentence = true;
+            translatedAdvice = translatedAdvice.toLowerCase();
+            console.log(translatedAdvice);
+
+            var firstLetter = translatedAdvice.charAt(0);
+            firstLetter = firstLetter.toUpperCase();
+            translatedAdvice = translatedAdvice.slice(1);
+            var finalResult = firstLetter + translatedAdvice;
+            console.log(finalResult);
+
+            finalResult = '"' + finalResult + '."';
+
+            $("#translated-advice").text(finalResult);
+        
+            
+        }
+    
+
+
+            // if (translatedAdvice.includes("  ")) {
+            //     translatedAdvice = translatedAdvice.split("  ");
+            //     console.log(translatedAdvice);
+            //     for (i = 0; i < translatedAdvice.length-1; i++) {
+            //         newTranslatedAdvice = translatedAdvice[i] + " " + translatedAdvice[i+1];
+            //         console.log(newTranslatedAdvice);
+            //     }
+            // }
+        
+
+
+        // translatedAdvice = translatedAdvice.toLowerCase();
+        // translatedAdvice = translatedAdvice.split(".");
+        // console.log(translatedAdvice);
+
+        // if (translatedAdvice[1]) {
+        //     translatedAdvice = translatedAdvice[0] + ". " + translatedAdvice[1] + ".";
+        //     console.log(translatedAdvice);
+        //     translatedAdvice[0].charAt(0).toUpperCase();
+        //     translatedAdvice[1].charAt(0).toUpperCase();
+        //     translatedAdvice = translatedAdvice[0] + ". " + translatedAdvice[1];
+        // } else {
+        //     console.log(translatedAdvice);
+        //     console.log(typeof translatedAdvice);
+        //     translatedAdvice = translatedAdvice.toString();
+        //     console.log(translatedAdvice);
+        //     translatedAdvice = translatedAdvice.charAt(0).toUpperCase() + translatedAdvice.slice(1);
+        //     translatedAdvice = translatedAdvice + ".";
+        // }
+
+        
 
         //more needs to be here about making the modal visible and display it properly
 
