@@ -75,6 +75,7 @@ h2 {
 
 h5 {
     margin: 0 0 10px 0;
+    color: white;
 }
 
 .title{
@@ -115,7 +116,7 @@ h5 {
 }
 
 #preview-advice{
-    border: 2px green solid;
+    border: 2px yellow solid;
     padding: 10px;
     color: white;
 }
@@ -129,11 +130,19 @@ h5 {
 
 textarea {
     width: 50%;
+    background-color: black;
     color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 2px solid yellow;
 }
 
 #translate-btn-1, #translate-btn-2 {
     margin-top: 40px;
+    background-color:yellow;
+    box-shadow: 0 5px 35px green;
+    color: black;
+
 }
 
 /* Modal */
