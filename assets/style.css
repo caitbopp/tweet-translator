@@ -148,6 +148,14 @@ textarea {
 	margin-left: -20px;
 }
 
+/* Previous translations */
+.white-background {
+    background-color: #fff;
+    color: black;
+    padding: 15px;
+}
+
+
 .hidden{
     display: none;
 }

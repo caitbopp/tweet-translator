@@ -10,6 +10,7 @@ $(document).ready(function () {
     var translatedList = [];
     var translatedAdvice;
     var advice;
+    var finalResult;
     var dt = new Date();
 
     $("#date-time").text(dt);
@@ -51,11 +52,29 @@ $(document).ready(function () {
     doneBtn.click(setLocalStorage);
 
     function setLocalStorage(){
-        translatedList.push(translatedAdvice);
+        translatedList.push(finalResult);
         console.log(translatedList);
         localStorage.setItem("previous-translation-list", translatedList);
-        $("#translated-advice").val("");
+        $("#final-result").val("");
     }
+
+    function getLocalStorage() {
+        var previousTranslation = localStorage.getItem("previous-translation-list");
+
+        if (!previousTranslation) {
+            return;
+        }
+
+        $("#previous-advice").text(previousTranslation);
+        $("#previous-translations").removeClass("hidden");
+
+    }
+
+    function initialize() {
+        getLocalStorage();
+    }
+
+    initialize();
 
     translateBtn1.click(translateToYoda);
 
@@ -118,7 +137,9 @@ $(document).ready(function () {
             translatedAdviceTwo = translatedAdvice[1].slice(1);
 
             finalResult = '"' + firstLetterOne + translatedAdviceOne + '. ' + firstLetterTwo + translatedAdviceTwo + '."';
-            $("#translated-advice").text(finalResult);
+            $("#final-result").text(finalResult);
+            setLocalStorage();
+            getLocalStorage();
         } else {
             console.log("One sentence")
             console.log(translatedAdvice);
@@ -129,51 +150,16 @@ $(document).ready(function () {
             var firstLetter = translatedAdvice.charAt(0);
             firstLetter = firstLetter.toUpperCase();
             translatedAdvice = translatedAdvice.slice(1);
-            var finalResult = firstLetter + translatedAdvice;
+            finalResult = firstLetter + translatedAdvice;
             console.log(finalResult);
 
             finalResult = '"' + finalResult + '."';
 
-            $("#translated-advice").text(finalResult);
-        
-            
+            $("#final-result").text(finalResult);
+            setLocalStorage();
+            getLocalStorage();
         }
-    
 
-
-            // if (translatedAdvice.includes("  ")) {
-            //     translatedAdvice = translatedAdvice.split("  ");
-            //     console.log(translatedAdvice);
-            //     for (i = 0; i < translatedAdvice.length-1; i++) {
-            //         newTranslatedAdvice = translatedAdvice[i] + " " + translatedAdvice[i+1];
-            //         console.log(newTranslatedAdvice);
-            //     }
-            // }
-        
-
-
-        // translatedAdvice = translatedAdvice.toLowerCase();
-        // translatedAdvice = translatedAdvice.split(".");
-        // console.log(translatedAdvice);
-
-        // if (translatedAdvice[1]) {
-        //     translatedAdvice = translatedAdvice[0] + ". " + translatedAdvice[1] + ".";
-        //     console.log(translatedAdvice);
-        //     translatedAdvice[0].charAt(0).toUpperCase();
-        //     translatedAdvice[1].charAt(0).toUpperCase();
-        //     translatedAdvice = translatedAdvice[0] + ". " + translatedAdvice[1];
-        // } else {
-        //     console.log(translatedAdvice);
-        //     console.log(typeof translatedAdvice);
-        //     translatedAdvice = translatedAdvice.toString();
-        //     console.log(translatedAdvice);
-        //     translatedAdvice = translatedAdvice.charAt(0).toUpperCase() + translatedAdvice.slice(1);
-        //     translatedAdvice = translatedAdvice + ".";
-        // }
-
-        
-
-        //more needs to be here about making the modal visible and display it properly
 
     }
 
