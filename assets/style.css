@@ -1,11 +1,3 @@
-html { 
-    background: url(Images/image.png) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  
 * {
     padding: 0;
     margin: 0;
@@ -14,9 +6,59 @@ html {
     line-height: 2;
 }
 
-url {
-    background-color: #ffffff; 
+body { 
+    background: url(Images/image.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
+h1 img {
+    border: solid rgb(3, 248, 23);
+    border-radius: 10px;
+    box-shadow: 0 5px 35px rgb(79, 216, 67);
+}
+
+.quote {
+	position: relative;
+	background: #10b5ac;
+	border-radius: .4em;
+}
+
+.quote:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-bottom-color: #10b5ac;
+	border-top: 0;
+	margin-left: -20px;
+	margin-top: -20px;
+}
+
+p, h2, h5, h6 {
+    background-color: #10b5ac;
+    border: solid rgba(3, 248, 203, 0.72);
+    box-shadow: 0 5px 35px rgb(79, 216, 67);
+    color: white;
+    padding: 15px;
+}
+
+p {
+    margin: 30px 20px 20px 20px;
+    font-size: 20px;
+}
+
+h2 {
+    padding-top: 25px;
+}
+
+h5 {
+    margin: 0 0 10px 0;
 }
 
 #main-page {
@@ -26,81 +68,11 @@ url {
     align-items: center;
 }
 
-img {
-    background-color: #000000;
-    border: solid rgb(3, 248, 23);
-    box-shadow: 0 5px 35px rgb(79, 216, 67);
-    
+/* Random advice div */
 
-}
-
-p {
-    margin: 30px 20px 20px 20px;
-    font-size: 20px;
-    background-color: #10b5ac;
-    border: solid rgba(3, 248, 203, 0.72);
-    box-shadow: 0 5px 35px rgb(79, 216, 67);
-    color: white;
-
-}
-
-h2, h6 {
-    background-color: #10b5ac;
-    color: white;
-    border: solid rgba(3, 248, 203, 0.72);
-    box-shadow: 0 5px 35px rgb(79, 216, 67);
-}
-
-h5 {
-    margin: 0 0 10px 0;
-    background-color: #10b5ac;
-    color: white;
-    border: solid rgba(3, 248, 203, 0.72);
-    box-shadow: 0 5px 35px rgb(79, 216, 67);
-}
-
-textarea {
-    width: 50%;
-}
-
-#translate-btn, .submit-btn {
-    margin-top: 40px;
-}
-
-#translated-advice{
-    background-color: #00aabb;
-    border: none;
-    box-shadow: none;
-    padding: 10px;
-}
-
-#random-advice-btn {
-    margin-top: 0;
-}
-
-.flex{
+.flex-column{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.flex-row{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.random-advice-div{
-    margin-bottom: 5%;
-}
-
-.own-advice-div{
-    margin-bottom: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
 }
 
 #preview-advice{
@@ -109,12 +81,49 @@ textarea {
     color: white;
 }
 
-.submit-btn{
-    background-color: rgb(51, 136, 51);
+/* Own advice div */
+
+.own-advice-div{
+    justify-content: center;
+    align-items: center;
 }
 
-.hidden{
-    display: none;
+textarea {
+    width: 50%;
+    color: white;
+}
+
+#translate-btn-1, #translate-btn-2 {
+    margin-top: 40px;
+}
+
+/* Modal */
+
+.modal-trigger{
+    margin-bottom: 5%;
+}
+
+.flex-row{
+    display: flex;
+}
+
+.double-center{
+    justify-content: center;
+    align-items: center;
+}
+
+.cute-yoda{
+    transform: scaleX(-1);
+    border: none;
+    background-color: white;
+    box-shadow: none;
+}
+
+#translated-advice{
+    background-color: #00aabb;
+    border: none;
+    box-shadow: none;
+    padding: 10px;
 }
 
 .speech-bubble {
@@ -138,13 +147,6 @@ textarea {
 	margin-left: -20px;
 }
 
-.cute-yoda{
-    transform: scaleX(-1);
-    border: none;
-    background-color: white;
-    box-shadow: none;
-}
-
-.modal-trigger{
-    margin-bottom: 5%;
+.hidden{
+    display: none;
 }

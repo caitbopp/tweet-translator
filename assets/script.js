@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-
     var randomGeneratorBtn = $("#random-advice-btn");
     var ownAdviceBtn = $("#own-advice-btn");
     var retryButton = $("#retry-btn");
@@ -13,14 +12,11 @@ $(document).ready(function () {
     var advice;
     var dt = new Date();
 
-    document.getElementById('date-time').innerHTML=dt;
+    $("#date-time").text(dt);
 
-    // $(randomGeneratorBtn).click(getRandomQuote());
     randomGeneratorBtn.click(getRandomAdvice);
     retryButton.click(getRandomAdvice);
-    ownAdviceBtn.click(displayOwnAdvice);
-
-
+    
     function getRandomAdvice() {
         fetch("https://api.adviceslip.com/advice", {
             "method": "GET",
@@ -44,16 +40,14 @@ $(document).ready(function () {
         $("#preview-advice").text(advice);
     }
 
+    ownAdviceBtn.click(displayOwnAdvice);
+
     function displayOwnAdvice() {
         $(".own-advice-div").removeClass("hidden");
         $(".random-advice-div").addClass("hidden");
    
     }
-
-
-
-    translateBtn1.click(translateToYoda);
-    translateBtn2.click(translateOwnAdvice);
+    
     doneBtn.click(setLocalStorage);
 
     function setLocalStorage(){
@@ -62,6 +56,8 @@ $(document).ready(function () {
         localStorage.setItem("previous-translation-list", translatedList);
         $("#translated-advice").val("");
     }
+
+    translateBtn1.click(translateToYoda);
 
     function translateToYoda() {
         var yodaURL = "https://api.funtranslations.com/translate/yoda.json?text=" +
@@ -83,6 +79,8 @@ $(document).ready(function () {
             })
     }
 
+    translateBtn2.click(translateOwnAdvice);
+
     function translateOwnAdvice() {
         if (!ownTextArea.val()) {
             return;
@@ -92,7 +90,6 @@ $(document).ready(function () {
             translateToYoda(advice);
         }
     }
-
 
     function showFinalResult(data) {
         translatedAdvice = data.contents.translated;
