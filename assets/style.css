@@ -14,6 +14,10 @@ body {
     background-size: cover;
 }
 
+h1 {
+    margin: 40px 0 0 0;
+}
+
 h1 img {
     border: solid rgb(3, 248, 23);
     border-radius: 10px;
@@ -26,9 +30,8 @@ h1 img {
     border: solid yellow;
     box-shadow: 0 5px 35px green;
     border-radius: .4em;
-    height: 100px;
     box-shadow: none;
-    padding: 0;
+    padding: 20px 10px;
     margin: auto;
     color: white;
 }
@@ -37,7 +40,7 @@ h1 img {
 	content: '';
 	position: absolute;
 	left: 0;
-	top: 15%;
+	top: 20%;
 	width: 0;
 	height: 0;
 	border: 20px solid transparent;
@@ -56,14 +59,6 @@ h1 img {
     padding: 15px;
 }
 
-/* p, h2, h5, h6 {
-    background-color: black;
-    border: solid yellow;
-    box-shadow: 0 5px 35px green;
-    color: white;
-    padding: 15px;
-} */
-
 p {
     margin: 30px 20px 20px 20px;
     font-size: 20px;
@@ -71,6 +66,7 @@ p {
 
 h2 {
     padding-top: 25px;
+    font-size: 300%;
 }
 
 h5 {
