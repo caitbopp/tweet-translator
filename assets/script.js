@@ -97,7 +97,7 @@ $(document).ready(function () {
     function showFinalResult(data) {
         translatedAdvice = data.contents.translated;
 
-        translatedAdvice = translatedAdvice + " - Yoda";
+        translatedAdvice = '"' + translatedAdvice + '"';
 
         $("#translated-advice").text(translatedAdvice);
 
