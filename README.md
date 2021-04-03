@@ -18,7 +18,7 @@ After a result is displayed, the users most recent tranlations will be displayed
 
 ## Features
 
-This webpage features semantic HTML as well as responsive design. The page has 2 break points (768px and 992px) and will display nicely across any size screen.
+This webpage features semantic HTML as well as responsive design. The page will display nicely across any size screen.
 
 ## Credits
 
