@@ -14,7 +14,7 @@ Users can either type out their own advice or click on a button to randomly gene
 
 After a result is displayed, the users most recent tranlations will be displayed on the page.
 
-![Yoda Advice](PATH TO IMAGE NEEDS TO GO HERE)
+![Yoda Advice](assets/Images/project-screenshot.png)
 
 ## Features
 
@@ -28,4 +28,4 @@ Jeff DeRosalia, Dan Rosenbaum
 
 ## Link
 
-LINK TO WEB PAGE SHOULD GO HERE
+https://caitbopp.github.io/yoda-advice/
