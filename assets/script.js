@@ -128,6 +128,7 @@ $(document).ready(function () {
         if (translatedAdvice.includes(".")) {
             console.log("More than 1 sentence");
             translatedAdvice = translatedAdvice.toLowerCase();
+            
             translatedAdvice = translatedAdvice.split(".");
 
             var firstLetterOne = translatedAdvice[0].charAt(0);
@@ -140,6 +141,8 @@ $(document).ready(function () {
             translatedAdviceTwo = translatedAdvice[1].slice(1);
 
             finalResult = '"' + firstLetterOne + translatedAdviceOne + '. ' + firstLetterTwo + translatedAdviceTwo + '."';
+
+            finalResult = finalResult.replace(",", ", ");
 
             $("#final-result").text(finalResult);
             // $("#previous-advice").text(finalResult);
@@ -155,6 +158,8 @@ $(document).ready(function () {
             finalResult = firstLetter + translatedAdvice;
 
             finalResult = '"' + finalResult + '."';
+
+            finalResult = finalResult.replace(",", ", ");
 
             $("#final-result").text(finalResult);
             // $("#previous-advice").text(finalResult);
