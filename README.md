@@ -20,6 +20,8 @@ After a result is displayed, the users most recent tranlations will be displayed
 
 This webpage features semantic HTML as well as responsive design. The page will display nicely across any size screen.
 
+In addition, there is a light mode and space mode (dark mode) that can be toggled between. Users can choose whichever color scheme they prefer.
+
 ## Credits
 
 Caitlin Bopp, Jashawn Stewart, Tomeeka Lilly-Sibley, Ryan Scherr
