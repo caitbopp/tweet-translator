@@ -3,8 +3,8 @@ $(document).ready(function () {
     var randomGeneratorBtn = $("#random-advice-btn");
     var ownAdviceBtn = $("#own-advice-btn");
     var retryButton = $("#retry-btn");
-    var translateBtn1 = $(".modal-trigger");
-    var translateBtn2 = $(".modal-trigger");
+    var translateBtn1 = $("#translate-btn-1");
+    var translateBtn2 = $("#translate-btn-2");
     var ownTextArea = $("#text-area");
     // var doneBtn = $("#done-btn");
     var translatedList = [];
@@ -114,7 +114,7 @@ $(document).ready(function () {
         }
         else {
             advice = ownTextArea.val();
-            translateToYoda(advice);
+            translateToYoda();
         }
     }
 
