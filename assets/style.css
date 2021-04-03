@@ -115,22 +115,26 @@ h5 {
     border: 2px yellow solid;
     padding: 10px;
     color: white;
+    font-size: 20px;
+    background-color: black;
 }
 
 /* Own advice div */
 
-.own-advice-div{
+.own-advice-div, .random-advice-div{
     justify-content: center;
     align-items: center;
 }
 
 textarea {
     width: 50%;
+    height: 50%;
     background-color: black;
     color: white;
     font-weight: bold;
     padding: 5px 10px;
     border: 2px solid yellow;
+    font-size: 20px;
 }
 
 #translate-btn-1, #translate-btn-2 {
