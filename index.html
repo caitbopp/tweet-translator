@@ -10,27 +10,22 @@
 	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css" />
 	<link rel="stylesheet" href="assets/style.css">
-	<!--Let browser know website is optimized for mobile-->
+
 </head>
 
-<script>
-	function switchBackground(newColor) {
-	  document.body.style.background = newColor;
-	}
-  </script>
-  <button onclick="switchBackground('white');">White Background</button>
-  <button onclick="switchBackground('black');">Black Background</button>
-</script> 
+<body class="container space-background">
 
+	<div class="toggle-btn-container">
+		<button id="toggle-mode-btn">Light Mode</button>
+	</div>
 
-<body class="container">
 	<header class="header-custom" style="font-family:fantasy">
 		<div class="row">
 			<div class="center col s12">
 				<h1><span class="title">Yoda Advice</span></h1>
 				<div class="flex-row center">
 					<img src="assets/Images/Yoda_TPM_RotS.png" class="center" alt="Yoda" width="185">
-					<h2 class="quote">"Do or do not, there is no try."</h2>
+					<h2 class="quote quote-space-mode">"Do or do not, there is no try."</h2>
 				</div>
 				<p class="glow">In a galaxy far, far away...Yoda, the Jedi Master, is revered for his timeless wisdom and unique way of speaking. On this webpage, you can have Yoda translate a  randomly generated piece of advice or your own advice - click either button to get started!</p>
 			</div>
@@ -52,7 +47,7 @@
 		</div>
 
 		<div class="hidden own-advice-div flex-column">
-			<h5>Enter your own advice</h5>
+			<h5 id="own-advice-text">Enter your own advice</h5>
 			<textarea id="text-area"></textarea>
 			<a class="waves-light btn modal-trigger" href="#modal1" id="translate-btn-2">Translate</a>
 		</div>
@@ -73,7 +68,7 @@
 
 		<div>
 			<div class="carousel">
-				<h3 class="white-text">Previous Advice</h3>
+				<h3 class="white-text previous-advice">Previous Advice</h3>
 				<a class="carousel-item green darken-4 white-text" href="#one!"></a>
 				<a class="carousel-item green darken-4 white-text" href="#two!"></a>
 				<a class="carousel-item green darken-4 white-text" href="#three!"></a>

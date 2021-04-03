@@ -6,16 +6,53 @@ $(document).ready(function () {
     var translateBtn1 = $("#translate-btn-1");
     var translateBtn2 = $("#translate-btn-2");
     var ownTextArea = $("#text-area");
-    // var doneBtn = $("#done-btn");
+    var toggleModeBtn = $("#toggle-mode-btn");
+    var spaceMode = true;
     var translatedList = [];
     var translatedAdvice;
     var advice;
     var finalResult;
     var carouselItem = document.querySelectorAll(".carousel-item");
 
-    // var dt = new Date();
+    toggleModeBtn.click(toggleMode);
 
-    // $("#date-time").text(dt);
+    function toggleMode(){
+        if (spaceMode == true) {
+            toggleModeBtn.css({"background-color": "black", "color": "white"});
+            $(".container").removeClass("space-background");
+            toggleModeBtn.text("Space Mode");
+            $(".title").css("color", "black");
+            $(".previous-advice").removeClass("white-text");
+            $(".quote").addClass("quote-light-mode").removeClass("quote-space-mode");
+            $(".glow").css({"background-color": "white", "border": "solid black", "color": "black"});
+            $(".box").css({"background-color": "white", "color": "black", "border": "2px solid black"});
+            $("#preview-advice").css({"background-color": "white", "color": "black", "border": "2px solid black"});
+            $("#random-advice-btn").css({"background-color": "black", "color": "white"});
+            $("#own-advice-btn").css({"background-color": "black", "color": "white"});
+            $("#translate-btn-1").css({"background-color": "green", "box-shadow": "0 5px 35px yellow", "color": "white"});
+            $("#translate-btn-2").css({"background-color": "green", "box-shadow": "0 5px 35px yellow", "color": "white"});
+            $("#own-advice-text").css("color", "black");
+            $("textarea").css({"background-color": "white", "color": "black", "border": "2px solid black"});
+            spaceMode = false;
+        } else {
+            toggleModeBtn.css({"background-color": "white", "color": "black"});
+            $(".container").addClass("space-background");
+            toggleModeBtn.text("Light Mode");
+            $(".title").css("color", "white");
+            $(".previous-advice").addClass("white-text");
+            $(".quote").addClass("quote-space-mode").removeClass("quote-light-mode");
+            $(".glow").css({"background-color": "black", "border": "solid yellow", "color": "white"});
+            $(".box").css({"background-color": "black", "color": "white", "border": "2px solid yellow"});
+            $("#preview-advice").css({"background-color": "black", "color": "white", "border": "2px solid yellow"});
+            $("#random-advice-btn").css({"background-color": "yellow", "color": "black"});
+            $("#own-advice-btn").css({"background-color": "yellow", "color": "black"});
+            $("#translate-btn-1").css({"background-color": "yellow", "box-shadow": "0 5px 35px green", "color": "black"});
+            $("#translate-btn-2").css({"background-color": "yellow", "box-shadow": "0 5px 35px green", "color": "black"});
+            $("#own-advice-text").css("color", "white");
+            $("textarea").css({"background-color": "black", "color": "white", "border": "2px solid yellow"});
+            spaceMode = true;
+        }
+    }
 
     randomGeneratorBtn.click(getRandomAdvice);
     retryButton.click(getRandomAdvice);
