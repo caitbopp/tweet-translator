@@ -152,6 +152,15 @@ button:hover {
     transform: scale(1.1);
 }
 
+#retry-btn {
+    margin-top: 1%;
+    padding: 1%;
+}
+#retry-btn:focus {
+    background: white;
+    color: black;
+}
+
 .modal-trigger:hover {
     transform: scale(1.1);
 }
