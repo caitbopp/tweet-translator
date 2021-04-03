@@ -6,14 +6,16 @@ $(document).ready(function () {
     var translateBtn1 = $(".modal-trigger");
     var translateBtn2 = $(".modal-trigger");
     var ownTextArea = $("#text-area");
-    var doneBtn = $("#done-btn");
+    // var doneBtn = $("#done-btn");
     var translatedList = [];
     var translatedAdvice;
     var advice;
     var finalResult;
-    var dt = new Date();
+    var carouselItem = document.querySelectorAll(".carousel-item");
 
-    $("#date-time").text(dt);
+    // var dt = new Date();
+
+    // $("#date-time").text(dt);
 
     randomGeneratorBtn.click(getRandomAdvice);
     retryButton.click(getRandomAdvice);
@@ -49,12 +51,12 @@ $(document).ready(function () {
    
     }
     
-    doneBtn.click(setLocalStorage);
+    // doneBtn.click(setLocalStorage);
 
-    function setLocalStorage(){
-        translatedList.push(finalResult);
+    function setLocalStorage(finalResult){
+        translatedList.unshift(finalResult);
         console.log(translatedList);
-        localStorage.setItem("previous-translation-list", translatedList);
+        localStorage.setItem("previous-translation-list", JSON.stringify(translatedList));
         $("#final-result").val("");
     }
 
@@ -63,12 +65,18 @@ $(document).ready(function () {
 
         if (!previousTranslation) {
             return;
+        } else {
+        previousTranslation = JSON.parse(previousTranslation);
+
+        for (i = 0; i < previousTranslation.length; i++) {
+            $(carouselItem[i]).text(previousTranslation[i]);
         }
 
-        $("#previous-advice").text(previousTranslation);
-        $("#previous-translations").removeClass("hidden");
-
+        // $("#previous-advice").text(previousTranslation[0]);
+        // $("#previous-translations").removeClass("hidden");
+        // }
     }
+}
 
     function initialize() {
         getLocalStorage();
@@ -113,19 +121,14 @@ $(document).ready(function () {
     function showFinalResult(data) {
         translatedAdvice = data.contents.translated;
 
-        var oneSentence = true;
-
         translatedAdvice = translatedAdvice.toString();
         console.log(typeof translatedAdvice);
         translatedAdvice = translatedAdvice.slice(0, -1);
 
         if (translatedAdvice.includes(".")) {
             console.log("More than 1 sentence");
-            oneSentence = false;
             translatedAdvice = translatedAdvice.toLowerCase();
             translatedAdvice = translatedAdvice.split(".");
-            console.log(translatedAdvice[0]);
-            console.log(translatedAdvice[1]);
 
             var firstLetterOne = translatedAdvice[0].charAt(0);
             firstLetterOne = firstLetterOne.toUpperCase();
@@ -137,32 +140,34 @@ $(document).ready(function () {
             translatedAdviceTwo = translatedAdvice[1].slice(1);
 
             finalResult = '"' + firstLetterOne + translatedAdviceOne + '. ' + firstLetterTwo + translatedAdviceTwo + '."';
+
             $("#final-result").text(finalResult);
-            setLocalStorage();
+            // $("#previous-advice").text(finalResult);
+            setLocalStorage(finalResult);
             getLocalStorage();
         } else {
             console.log("One sentence")
-            console.log(translatedAdvice);
-            oneSentence = true;
             translatedAdvice = translatedAdvice.toLowerCase();
-            console.log(translatedAdvice);
 
             var firstLetter = translatedAdvice.charAt(0);
             firstLetter = firstLetter.toUpperCase();
             translatedAdvice = translatedAdvice.slice(1);
             finalResult = firstLetter + translatedAdvice;
-            console.log(finalResult);
 
             finalResult = '"' + finalResult + '."';
 
             $("#final-result").text(finalResult);
-            setLocalStorage();
+            // $("#previous-advice").text(finalResult);
+            setLocalStorage(finalResult);
             getLocalStorage();
         }
-
-
     }
 
     $('.modal-trigger').leanModal();
+
+    $(document).ready(function(){
+        $('.carousel').carousel();
+      });
+
 
 })
