@@ -114,7 +114,7 @@ h5 {
 #preview-advice{
     border: 2px yellow solid;
     padding: 10px;
-    color: white;
+    color: red;
     font-size: 20px;
     background-color: black;
 }
@@ -130,7 +130,7 @@ textarea {
     width: 50%;
     height: 50%;
     background-color: black;
-    color: white;
+    color: red;
     font-weight: bold;
     padding: 5px 10px;
     border: 2px solid yellow;
