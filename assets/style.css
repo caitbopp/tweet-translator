@@ -158,27 +158,37 @@ button:hover {
 
 /* Modal */
 
+.modal-container{
+    border-radius: 10px;
+}
+
+#modal-content{
+    padding: 24px 24px 0 24px;
+}
+
 .modal-trigger{
     margin-bottom: 5%;
 }
 
-.flex-row{
+.flex-row {
     display: flex;
 }
 
-.double-center{
+.double-center {
     justify-content: center;
     align-items: center;
 }
 
-.cute-yoda{
+.cute-yoda {
     transform: scaleX(-1);
     border: none;
     background-color: white;
     box-shadow: none;
+    min-width: 300px;
+    max-width: 300px;
 }
 
-#translated-advice{
+#translated-advice {
     background-color: #00aabb;
     border: none;
     box-shadow: none;
@@ -190,21 +200,26 @@ button:hover {
 	position: relative;
 	background: #00aabb;
 	border-radius: .4em;
+    padding: 10px;
 }
 
 .speech-bubble:after {
 	content: '';
 	position: absolute;
 	left: 0;
-	top: 25%;
+	top: 50%;
 	width: 0;
 	height: 0;
 	border: 20px solid transparent;
 	border-right-color: #00aabb;
 	border-left: 0;
-	border-bottom: 0;
+	border-top: 0;
 	margin-top: -10px;
 	margin-left: -20px;
+}
+
+#done-btn {
+    font-weight: bold;
 }
 
 /* Previous translations */
@@ -219,9 +234,11 @@ button:hover {
     text-align: center;
     padding: 10px;
     font-weight: bold;
+    font-size: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
 }
 
 .hidden{
