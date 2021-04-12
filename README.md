@@ -22,6 +22,10 @@ This webpage features semantic HTML as well as responsive design. The page will 
 
 In addition, there is a light mode and space mode (dark mode) that can be toggled between. Users can choose whichever color scheme they prefer.
 
+## Technologies Used
+
+HTML, CSS, JS, JQuery, MaterializeCSS, Fun Translations API, Advice Slip JSON API
+
 ## Credits
 
 Caitlin Bopp, Jashawn Stewart, Tomeeka Lilly-Sibley, Ryan Scherr
